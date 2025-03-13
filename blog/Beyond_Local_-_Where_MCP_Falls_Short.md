@@ -42,8 +42,24 @@ Lets start with the basics...
 Back in November, Anthropic [introduced](https://www.anthropic.com/news/model-context-protocol) *Model Context Protocol* as an open source protocol to standardize how applications provision context and tools to LLMs. The pitch is pretty straightforward: The burgeoning AI Tools ecosystem is fragmented and needs a standardized means of connecting LLMs with data sources and tools. This isn’t the same thing as tool-use, as I will elaborate on later, but instead a means of providing a two way connection for an Agent to request resources and have that resource respond.
 
 ---
-![MCP Request-Response Sequence Diagram](./assets/MCP-Request-Diagram.png)
-
+```mermaid
+  sequenceDiagram
+      participant Server
+      participant Client
+      participant User
+      participant LLM
+      
+      Server->>Client: sampling/createMessage
+      Client->>User: Present request for review
+      Note over User: Review request content
+      User->>Client: Approve or modify request
+      Client->>LLM: Sample from LLM
+      LLM-->>Client: Return completion
+      Client->>User: Present completion for review
+      Note over User: Review generated content
+      User->>Client: Approve or modify completion
+      Client->>Server: Return result
+```
 ---
 
 MCP uses a client-server model to achieve this, enabling the user of a given client to connect to multiple resources and tools over the network. Most modern web apps use a client-srever architecture nowadays, but since LLMs aren’t just . In short, this helps AI app developers setup resources and tools once, and simply request that resource in a chat interface later under some sort of command or mention (using slash or @).
@@ -64,7 +80,14 @@ I came back to the protocol earlier today after I saw a feature within Cursor to
 
 For this, everything comes down to the [_Sampling_](https://modelcontextprotocol.io/docs/concepts/sampling) mechanism, which is what enables the MCP _servers_ to request completions from LLMs. MCP's _Sampling_ request schema includes a couple neat features like model selection and context, but technically MCP doesn't actually interface directly with the LLM. 
 
-![MCP Client Feature Matrix](./assets/MCPClientFeatureSupportMatrix_Feb2024.png)
+| Client | Resources | Prompts | Tools | Sampling | Roots | Notes |
+|--------|-----------|---------|-------|----------|-------|-------|
+| Claude Desktop App | ✅ | ✅ | ✅ | ❌ | ❌ | Full support for all MCP features |
+| 5ire | ❌ | ❌ | ✅ | ❌ | ❌ | Supports tools. |
+| BeeAI Framework | ❌ | ❌ | ✅ | ❌ | ❌ | Supports tools in agentic workflows. |
+| Cline | ✅ | ❌ | ✅ | ❌ | ❌ | Supports tools and resources. |
+| Continue | ✅ | ✅ | ✅ | ❌ | ❌ | Full support for all MCP features |
+| Cursor | ❌ | ❌ | ✅ | ❌ | ❌ | Supports tools. |
 
 This brings us to our first caveat for MCP.  without an implementation on the client side, your mcp will lack the basic features needed to support [_Sampling_](https://modelcontextprotocol.io/docs/concepts/sampling). 
 
