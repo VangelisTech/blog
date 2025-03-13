@@ -1,0 +1,18 @@
+.qodo
+.DS_Store
+
+# Cache directories
+.cache/
+.temp/
+.tmp/
+
+# Optional: Package manager files
+yarn.lock
+package-lock.json
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
