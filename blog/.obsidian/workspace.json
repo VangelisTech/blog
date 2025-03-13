@@ -37,22 +37,6 @@
           }
         ],
         "currentTab": 1
-      },
-      {
-        "id": "1537f005631aae83",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "62949ea8cf89a16d",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -199,11 +183,35 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "963bfe79ee84ce91",
+  "active": "36fed9c275add6dc",
   "lastOpenFiles": [
-    "assets",
-    "Welcome.md",
+    "DRAFT_Model_Routers_-_notDiamond,.md",
+    "DRAFT_MIT's_Agent_Index_-_Autonomous_Agent_Registry.md",
+    "DRAFT_Comparing_Agent_Frameworks_-_A_Comprehensive_Guide.md",
+    "DRAFT_OpenAI's_Agent_SDK_-_A_thorough_review.md",
+    "DRAFT_Visualizing_LanceDB's_Python_API.md",
+    "DRAFT_llm.c_-_A_peek_into_canonical_reference_software.md",
+    "test_test.md",
+    "Beyond Local - Where MCP Falls Short.md",
+    "Beyond_Local_-_Where_MCP_Falls_Short.md",
+    "DRAFT Visualizing LanceDB's Python API.md",
+    "DRAFT OpenAI's Agent SDK - A thorough review.md",
+    "DRAFT Model Routers - notDiamond,.md",
+    "DRAFT MIT's Agent Index - Autonomous Agent Registry.md",
+    "MIT's Agent Index - Autonomous Agent Registry.md",
+    "DRAFT llm.c - A peek into canonical reference software.md",
+    "DRAFT Comparing Agent Frameworks - A Comprehensive Guide.md",
+    "Visualizing LanceDB's Python API.md",
+    "Untitled",
+    "OpenAI's Agent SDK - A thorough review.md",
+    "Model Routers - notDiamond,.md",
+    "Comparing Agent Frameworks - A Comprehensive Guide.md",
+    "llm.c - A peek into canonical reference software.md",
+    "assets/MCP-Request-Diagram.png",
+    "assets/MCPClientFeatureSupportMatrix_Feb2024.png",
     "templates/Standard.md",
+    "assets/llmc-OneMoreThought.png",
+    "assets",
     "templates"
   ]
 }

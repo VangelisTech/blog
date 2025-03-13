@@ -57,7 +57,7 @@ def generate_recents():
     blog_files.sort(key=lambda x: (x['date'] is None, x['date'] if x['date'] else ''), reverse=True)
 
     # Generate TOC
-    toc = f"{RECENTS_START_MARKER}\n## Blog Posts\n\n"
+    toc = f"{RECENTS_START_MARKER}\n## Recent Posts\n\n"
     for entry in blog_files:
         date_str = entry['date'].strftime('%Y-%m-%d') if entry['date'] else ''
         if date_str:
