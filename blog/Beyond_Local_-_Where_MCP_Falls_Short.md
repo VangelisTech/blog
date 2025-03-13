@@ -42,8 +42,7 @@ Lets start with the basics...
 Back in November, Anthropic [introduced](https://www.anthropic.com/news/model-context-protocol) *Model Context Protocol* as an open source protocol to standardize how applications provision context and tools to LLMs. The pitch is pretty straightforward: The burgeoning AI Tools ecosystem is fragmented and needs a standardized means of connecting LLMs with data sources and tools. This isn’t the same thing as tool-use, as I will elaborate on later, but instead a means of providing a two way connection for an Agent to request resources and have that resource respond.
 
 ---
-![[MCP-Request-Diagram.png]]
-%%MCP's Sequence Diagram%%
+![MCP Request-Response Sequence Diagram](./assets/MCP-Request-Diagram.png)
 
 ---
 
@@ -65,7 +64,7 @@ I came back to the protocol earlier today after I saw a feature within Cursor to
 
 For this, everything comes down to the [_Sampling_](https://modelcontextprotocol.io/docs/concepts/sampling) mechanism, which is what enables the MCP _servers_ to request completions from LLMs. MCP's _Sampling_ request schema includes a couple neat features like model selection and context, but technically MCP doesn't actually interface directly with the LLM. 
 
-![[MCPClientFeatureSupportMatrix_Feb2024.png]]
+![MCP Client Feature Matrix](./assets/MCPClientFeatureSupportMatrix_Feb2024.png)
 
 This brings us to our first caveat for MCP.  without an implementation on the client side, your mcp will lack the basic features needed to support [_Sampling_](https://modelcontextprotocol.io/docs/concepts/sampling). 
 
@@ -73,6 +72,14 @@ This brings us to our first caveat for MCP.  without an implementation on the cl
 
 You heard me. Turns out the llm client ends up doing it (as it always has) which means the implementation of how any given application actually uses an llm to choose tools is eventually up to the developer. In MCP, [_clients_](https://modelcontextprotocol.io/clients) actually implement the logic, so innovation is limited by what the _client_ supports. See MCP’s [example client](https://modelcontextprotocol.io/quickstart/client) for their reference implementation. Overall, the fact that MCP doesn’t over specify how an llm selects a tool provides developers with more flexibility, but it does make the Model Context Protocol feel less impressive.
 
+
+### So what about server side? 
+
+ADD SERVER FEATURE MATRIX HERE IF EXISTS. 
+
+ADD LIST OF TOP HELPFUL SERVERS
+ADD LIST OF MCP SERVER INDICES
+THEN ADD PICTURE OF ANDREI KARPATHY'S POST ASKING FOR IT TO PLEASE STOP
 
 
 This is where the details start to really matter. MCP is NOT a tool calling framework. MCP gives you the primitives to define tools and resources, but not how they end up being used by the LLM. That burden rests entirely with the client/server developers, which, at the end of the day, is a good thing.
