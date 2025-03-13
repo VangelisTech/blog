@@ -41,7 +41,7 @@ Lets start with the basics...
 
 Back in November, Anthropic [introduced](https://www.anthropic.com/news/model-context-protocol) *Model Context Protocol* as an open source protocol to standardize how applications provision context and tools to LLMs. The pitch is pretty straightforward: The burgeoning AI Tools ecosystem is fragmented and needs a standardized means of connecting LLMs with data sources and tools. This isn’t the same thing as tool-use, as I will elaborate on later, but instead a means of providing a two way connection for an Agent to request resources and have that resource respond.
 
----
+
 ```mermaid
   sequenceDiagram
       participant Server
@@ -60,7 +60,7 @@ Back in November, Anthropic [introduced](https://www.anthropic.com/news/model-co
       User->>Client: Approve or modify completion
       Client->>Server: Return result
 ```
----
+
 
 MCP uses a client-server model to achieve this, enabling the user of a given client to connect to multiple resources and tools over the network. Most modern web apps use a client-srever architecture nowadays, but since LLMs aren’t just . In short, this helps AI app developers setup resources and tools once, and simply request that resource in a chat interface later under some sort of command or mention (using slash or @).
 
