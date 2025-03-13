@@ -1,4 +1,4 @@
-
+# Beyond Local - Where MCP Falls Short
 
 Its almost half way through March of 2025 and Anthropic just closed its Series E round with $3.5 B in funding. At $18.2B raised, the frontier AI research startup has garnered significant traction from it's flagship family of Claude Large Language Models and accompanying software products. Products now include the recently released Claude Code terminal agent as well as the more familiar chat apps on desktop, mobile, and web. These products in conjunction with developer API endpoints and SDKs form the majority of Anthropic's ecosystem. 
 
