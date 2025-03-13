@@ -2,29 +2,29 @@
 
 Its almost half way through March of 2025 and Anthropic just closed its Series E round with $3.5 B in funding. At $18.2B raised, the frontier AI research startup has garnered significant traction from it's flagship family of Claude Large Language Models and accompanying software products. Products now include the recently released Claude Code terminal agent as well as the more familiar chat apps on desktop, mobile, and web. These products in conjunction with developer API endpoints and SDKs form the majority of Anthropic's ecosystem. 
 
-Anthropic's latest model release, Claude-3.7,  has received mixed reviews. Our sentiment has aligned with the broader developer community - the thing can code, but tends to over-perform  user requests, generally introducing more re-work than useful code. Given Anthropic's recent emphasis on supporting programming as a primary focus the latest "features" feel more like a chainsaw than the scalpel precision we were used to. This has been especially disappointing since a majority of developers favor Claude-3.5 to even the most advanced reasoning models. 
+Anthropic's latest model release, Claude-3.7,  has received mixed reviews. Our sentiment has aligned with the broader developer community - the thing can code, but tends to over-perform user requests, generally introducing more re-work than useful code. Given Anthropic's recent emphasis on supporting programming as a primary focus the latest "features" feel more like a chainsaw than the scalpel precision we were used to. This has been especially disappointing since a majority of developers favor Claude-3.5 to even the most advanced reasoning models. 
 
-As a closed source AI R&D firm, Anthropic holds all of the advantages and risks of releasing new models.  The closed-source foundation language model startup has raised billions from backers like Amazon, Google, and Menlo Ventures. This latest round should shore up some of the uncertainty introduced by DeepSeek's disruption earlier in the year, which as you might remember, sent markets into a frenzy with NVIDIA loosing $500B in valuation to a single trading session.  
+As a closed source AI R&D firm, Anthropic holds all of the advantages and risks of releasing new models. The closed-source foundation language model startup has raised billions from backers like Amazon, Google, and Menlo Ventures. This latest round should shore up some of the uncertainty introduced by DeepSeek's disruption earlier in the year, which as you might remember, sent markets into a frenzy with NVIDIA loosing $500B in valuation to a single trading session.  
 
 > [**Open-source software**](https://en.wikipedia.org/wiki/Open-source_software) (**OSS**) is computer software in which the copyright holder grants users the rights to use, study, change, and distribute the software and its source code to anyone and for any purpose. 
 
 DeepSeek represented the first major disruption of big money AI from the open-source software community, and certainly wont be the last. OSS has been a major focus within big tech for decades. Every major tech company relies on open source software to run large swaths of its infrastructure. Behind every cloud managed service lies open-source software that has been optimized on that company's hardware assets and proprietary code. 
-
-
 
 There are quite a few beneftis to OSS projects. 
 
 **For Companies** that steward open source software projects. Chiefest among them is the standardization of processes by means of mass adoption. More adoption means a more mature feature set, more focus on security and robust testing, resulting in an all around more compelling piece of software. 
 
 **For contributors**
-from multiple companies come together, the developers enjoy more collaboration and transparency, without the burden of  which leads to wider adoption and stronger security. Last but not least, its great marketing to developers. T
+from multiple companies come together, the developers enjoy more collaboration and transparency, without the burden of  which leads to wider adoption and stronger security. Last but not least, its great marketing to developers. They get the opportunity to try new tools, without needing to buy them. Developers also get practice working with professsional developers, on codebases at all levels of maturity in any programming language, to solve real world problems. The skills and relationships honed in these projects are invaluable to a developer's career.
 
 
 **For Consumers** 
 
-So 
+Software you can try before you buy lets you test if it works in your environment to solve your problem. If it doesn't do what you want, you can open bug reports to tell the developers what happened, and what you hoped would happen. Your specific computing environment is likely different than the one the developers are using, so you expand the testing in the direction of your use case. This is a win-win for everyone.
 
-Anthropic is no different. It too hold
+Machine learning models are different than the average software project. They are very general purpose tools.  
+
+**Anthropic is no different. It too hold**
 
 In fact Anthropic's biggest competitor, OpenAI, who currently dominates usage and adoption of  foundation models has a long history of open source contributions. Many of these projects, including OpenAI's API client SDK and OpenAI Gym have become standardized interfaces within their respective specialty, enabling developers to contribute to and enjoy a larger ecosystem of interoperable software. 
 
@@ -50,6 +50,10 @@ Back in November, Anthropic [introduced](https://www.anthropic.com/news/model-co
 MCP uses a client-server model to achieve this, enabling the user of a given client to connect to multiple resources and tools over the network. Most modern web apps use a client-srever architecture nowadays, but since LLMs aren’t just . In short, this helps AI app developers setup resources and tools once, and simply request that resource in a chat interface later under some sort of command or mention (using slash or @).
 
 Since its introduction, MCP has garnered significant adoption, thanks in part to Anthropic’s reputation as a foundation model provider and it’s growing language support. Several major AI tool providers (considered clients in MCP) have adopted the standard with a majority of them focused on IDE based coding assistants. As of writing this post in February of 2025, MCP maintains SDKs in Python, TypeScript, Java, and Kotlin, all of which uses JSON-RPC 2.0 for the transport layer.
+
+The server in MCP is not a container, or a VM, or a program. It's an interface standard. 
+
+MCP describes to models how to request resources and tools, and how to respond to those requests. The server is the implementation of that standard. The description is a json file.
 
 ### On Adoption
 
