@@ -43,15 +43,19 @@ def extract_title_and_date(file_path):
 def generate_recents():
     # Find all markdown files in blog directory
     blog_files = []
-    for file in os.listdir(BLOG_DIR):
-        if file.endswith('.md') and not (file.startswith('README') or file.startswith('DRAFT')):
-            file_path = os.path.join(BLOG_DIR, file)
-            title, date = extract_title_and_date(file_path)
-            blog_files.append({
-                'file': file,
-                'title': title,
-                'date': date
-            })
+    for root, dirs, files in os.walk(BLOG_DIR):
+        for file in files:
+            if file.endswith('.md') and not (file.startswith('README') or file.startswith('DRAFT')):
+                file_path = os.path.join(root, file)
+                title, date = extract_title_and_date(file_path)
+                # Use relative path from BLOG_DIR for the link
+                rel_path = os.path.relpath(file_path, start=os.path.dirname(BLOG_DIR))
+                blog_files.append({
+                    'file': rel_path,
+                    'title': title,
+                    'date': date
+                })
+
     
     # Sort by date (newest first)
     blog_files.sort(key=lambda x: (x['date'] is None, x['date'] if x['date'] else ''), reverse=True)
