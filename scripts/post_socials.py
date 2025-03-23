@@ -136,12 +136,21 @@ class SocialMediaManager:
         
         return results
 
+if __name__ == "__main__":
 
-# Example usage:
-# manager = SocialMediaManager()
-# manager.add_adapter(XAdapter())
-# manager.add_adapter(FacebookAdapter())
-# manager.add_adapter(ThreadsAdapter())
-# manager.add_adapter(MastodonAdapter())
-# manager.add_adapter(LinkedInAdapter())
-# results = manager.post_to_all("Check out our new product!", "https://example.com/image.jpg")
+    # Look for non-draft/published posts in the blog folder
+    blog_dir = "blog"
+    posts = []
+    for file in os.listdir(blog_dir):
+        if file.endswith(".md") and not file.startswith("DRAFT_"):
+            posts.append(file)
+
+    manager = SocialMediaManager()
+    manager.add_adapter(XAdapter())
+    manager.add_adapter(FacebookAdapter())
+    manager.add_adapter(ThreadsAdapter())
+    manager.add_adapter(MastodonAdapter())
+    manager.add_adapter(LinkedInAdapter())
+
+    results = manager.post_to_all("", "https://example.com/image.jpg")
+    print(results)
