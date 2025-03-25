@@ -1,0 +1,220 @@
+{
+  "main": {
+    "id": "52c4bc4a41b5eb14",
+    "type": "split",
+    "children": [
+      {
+        "id": "cbe3ad5fb3cc28d6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "be9b362bb87a6ac7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Welcome.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Welcome"
+            }
+          },
+          {
+            "id": "36fed9c275add6dc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "timely/Please_Make_it_Stop_-_Where_MCP_Falls_Short.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Please_Make_it_Stop_-_Where_MCP_Falls_Short"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "304eef501ae3acc8",
+    "type": "split",
+    "children": [
+      {
+        "id": "9295d797076b1bf9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "963bfe79ee84ce91",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "d8e691233a819bed",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "c7e8aac316fd86f9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1a8e5b0d5782804b",
+    "type": "split",
+    "children": [
+      {
+        "id": "ea55c07c86b863d9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ae5fdbebe73a7e44",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "templates/Standard.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Standard"
+            }
+          },
+          {
+            "id": "538347b836b95ff5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "templates/Standard.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Standard"
+            }
+          },
+          {
+            "id": "65b25f773bd6624e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "7362b98acac50080",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "templates/Standard.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Standard"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "36fed9c275add6dc",
+  "lastOpenFiles": [
+    "Untitled.md",
+    "timely/Please_Make_it_Stop_-_Where_MCP_Falls_Short.md",
+    "assets/AndreiKarpathy_MCP_PleaseMakeItStop.png",
+    "DRAFT_Model_Routers_-_notDiamond,.md",
+    "DRAFT_MIT's_Agent_Index_-_Autonomous_Agent_Registry.md",
+    "DRAFT_Comparing_Agent_Frameworks_-_A_Comprehensive_Guide.md",
+    "DRAFT_OpenAI's_Agent_SDK_-_A_thorough_review.md",
+    "DRAFT_Visualizing_LanceDB's_Python_API.md",
+    "DRAFT_llm.c_-_A_peek_into_canonical_reference_software.md",
+    "test_test.md",
+    "Beyond Local - Where MCP Falls Short.md",
+    "Beyond_Local_-_Where_MCP_Falls_Short.md",
+    "DRAFT Visualizing LanceDB's Python API.md",
+    "DRAFT OpenAI's Agent SDK - A thorough review.md",
+    "DRAFT Model Routers - notDiamond,.md",
+    "DRAFT MIT's Agent Index - Autonomous Agent Registry.md",
+    "MIT's Agent Index - Autonomous Agent Registry.md",
+    "DRAFT llm.c - A peek into canonical reference software.md",
+    "DRAFT Comparing Agent Frameworks - A Comprehensive Guide.md",
+    "Visualizing LanceDB's Python API.md",
+    "Untitled",
+    "OpenAI's Agent SDK - A thorough review.md",
+    "Model Routers - notDiamond,.md",
+    "Comparing Agent Frameworks - A Comprehensive Guide.md",
+    "llm.c - A peek into canonical reference software.md",
+    "assets/MCP-Request-Diagram.png",
+    "assets/MCPClientFeatureSupportMatrix_Feb2024.png",
+    "templates/Standard.md",
+    "assets/llmc-OneMoreThought.png",
+    "assets",
+    "templates"
+  ]
+}

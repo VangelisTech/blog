@@ -15,4 +15,6 @@ package-lock.json
 .vscode/
 *.swp
 *.swo
-*~
+
+.obsidian/
+
